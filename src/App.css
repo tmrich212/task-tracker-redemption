@@ -1,0 +1,79 @@
+body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+.App {
+  display: flex;
+  height: 100vh;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  height: 100vh;
+  padding: 2rem;
+}
+
+
+.form-container h1 {
+  text-align: center;
+}
+
+.form-container {
+  width: 40%;
+  padding: 1rem;
+  background-color: antiquewhite;
+  
+}
+
+.form-input {
+  padding-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+  font-size: x-large;
+  font-weight: bolder;
+}
+
+input, select {
+  width: 200px;
+  font-size: 16px;
+  padding: 5px;
+}
+
+.date-container {
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+}
+
+.submit {
+ padding-top: 2rem;
+}
+
+.submit button {
+  border: none;
+  border-radius: 12px;
+  background-color:rgb(255, 255, 255);
+  padding: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.task-panel {
+  width: 70%;
+  height: 100vh;
+  background-color: aliceblue;
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+}
