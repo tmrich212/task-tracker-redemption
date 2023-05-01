@@ -1,10 +1,9 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 
 const Form = () => {
     const [task, setTask] = useState('');
     const [status, setStatus] = useState('');
     const [date, setDate] = useState('');
-    const dateInputRef = useRef(null);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -35,7 +34,7 @@ const Form = () => {
                {/* <DatePicker /> */}
                <div className='date-container'>
                     <label htmlFor="date">Due Date</label>
-                    <input type="date" ref={dateInputRef} onChange={(e)=> setDate(e.target.value)}/>
+                    <input type="date" onChange={(e)=> setDate(e.target.value)}/>
                     <p>Selected Date: {date}</p>
                 </div>
 
