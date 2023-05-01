@@ -5,8 +5,8 @@ import TaskPanel from './components/TaskPanel';
 
 function App() {
   const [tasks, setNewTasks] = useState([
-    {title: 'Nothing to see here', status: 'incomplete', id: 1},
-    {title: 'Just testing the waters', status: 'in progress', id: 2},
+    {task: 'Nothing to see here', status: 'incomplete', date: '01/20/23', id: 1},
+    {task: 'Just testing the waters', status: 'in progress', id: 2},
   ]);
 
   const handleClick = (id) => {
@@ -17,9 +17,15 @@ function App() {
     })
   }
 
+  const addTask = (task) => {
+    setNewTasks((prevTask) => {
+      return [...prevTask, task];
+    })
+  }
+
   return (
     <div className="App">
-      <Form />
+      <Form addTask={addTask}/>
       <TaskPanel tasks={tasks} handleClick={handleClick}/>
     </div>
   );

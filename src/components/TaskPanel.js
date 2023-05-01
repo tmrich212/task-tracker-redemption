@@ -8,7 +8,7 @@ const TaskPanel = ({ tasks, handleClick }) => {
             <div className='task-container'>
             {tasks.map((task) => (
                   <div key={task.id} className="task-item">
-                    <h3>{task.title}</h3>
+                    <h3>{task.task}</h3>
                     <p>status: {task.status}</p>
                     <p>due date: {task.date}</p>
                     <button onClick={() => handleClick(task.id)}>delete item</button>
