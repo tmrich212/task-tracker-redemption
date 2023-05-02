@@ -2,6 +2,10 @@
     display: block;
     text-align: left;
     height: 100vh;
+    position: relative;
+    left: 37%;
+    right: 0;
+    width: 63%;
 }
 
 header h1 {
