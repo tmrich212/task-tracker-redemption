@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './Form.css'
 
 const Form = ({ addTask }) => {
     const [task, setTask] = useState('');
@@ -35,14 +36,14 @@ const Form = ({ addTask }) => {
                     <span>New Task</span>
                     <input type="text" placeholder='new todo'
                     value={task}
-                    onChange={(e) => setTask(e.target.value)}/>
+                    onChange={(e) => setTask(e.target.value)} required/>
                     </label>
                 </div>
                 <div className="form-input">
                     <label htmlFor="status">
                         <span>Status</span>
                         <select value={status} 
-                    onChange={(e) => setStatus(e.target.value)}>
+                    onChange={(e) => setStatus(e.target.value)} required>
                         <option value="incomplete">incomplete</option>
                         <option value="in-progress">in progress</option>
                         <option value="completed">completed</option>
@@ -53,7 +54,7 @@ const Form = ({ addTask }) => {
                <div className='form-input'>
                     <label htmlFor="date">
                         <span>Due Date</span>
-                        <input type="date" onChange={(e)=> setDate(e.target.value)} value={date}/>
+                        <input type="date" onChange={(e)=> setDate(e.target.value)} value={date} required/>
                     </label>
                     
                     {/* <p>Selected Date: {date}</p> */}
