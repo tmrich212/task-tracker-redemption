@@ -54,7 +54,7 @@ const Form = ({ addTask }) => {
                <div className='form-input'>
                     <label htmlFor="date">
                         <span>Due Date</span>
-                        <input type="date" onChange={(e)=> setDate(e.target.value)} value={date} required/>
+                        <input type="date" data-format="DD MMMM YYYY" onChange={(e)=> setDate(e.target.value)} value={date} required/>
                     </label>
                     
                     {/* <p>Selected Date: {date}</p> */}

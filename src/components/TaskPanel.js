@@ -1,7 +1,7 @@
 import React from 'react';
 import './TaskPanel.css'
 
-const TaskPanel = ({ tasks, handleClick }) => {
+const TaskPanel = ({ tasks, handleClick, editTask }) => {
     return ( 
         <div className='task-panel'> 
            <header><h1>Your To-do List</h1></header>
@@ -21,7 +21,8 @@ const TaskPanel = ({ tasks, handleClick }) => {
                   <td>{task.task}</td>
                   <td>{task.status}</td>
                   <td>{task.date}</td>
-                  <td><button onClick={() => handleClick(task.id)}>delete item</button></td>
+                  {/* <td><button className='action-btn' onClick={() => editTask(idx)}>edit</button></td> */}
+                  <td><button className='action-btn' onClick={() => handleClick(task.id)}>delete item</button></td>
                 </tr>
               ))}
 
