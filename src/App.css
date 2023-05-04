@@ -27,7 +27,13 @@ form {
 .form-container {
   width: 40%;
   padding: 1rem;
-  background-color: antiquewhite;
+  background-color: rgb(251, 232, 208);
+  background-color:  rgb(212, 243, 255);
+  background-color: #d4efda;
+
+  /* background-color:  rgb(231, 248, 255); */
+  /* background-color: rgb(126, 164, 89); */
+  /* background-color: antiquewhite; */
 }
 
 .form-input {
@@ -43,17 +49,17 @@ label {
   font-weight: bolder;
 }
 
-input, select {
+/* input, select {
   width: 200px;
   font-size: 16px;
   padding: 5px;
-}
+} */
 
-.date-container {
+/* .date-container {
   display: flex;
   justify-content: start;
   flex-direction: column;
-}
+} */
 
 .submit {
  padding-top: 2rem;
@@ -71,7 +77,7 @@ input, select {
 .task-panel {
   width: 70%;
   height: 100vh;
-  background-color: aliceblue;
+  /* background-color: aliceblue; */
   display: flex;
   justify-content: center;
   padding: 1rem 0;
