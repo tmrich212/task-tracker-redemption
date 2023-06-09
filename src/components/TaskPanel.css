@@ -33,6 +33,14 @@ header h1 {
     overflow-x: auto;
 }
 
+.label-incomplete {
+    background-color: #7ca585;
+}
+
+.label-in-progress {
+    background-color: orange;
+}
+
 .table thead {
     background-color: rgb(188, 228, 244);
     background-color: rgb(212, 243, 255);

@@ -1,16 +1,32 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 import Form from './components/Form';
 import TaskPanel from './components/TaskPanel';
 import Modal from './components/Modal';
 
+
+
+
 function App() {
   const [showModal, setShowModal] = useState(false);
+ 
+  const [tasks, setNewTasks] = useState(getLocalData());
 
-  const [tasks, setNewTasks] = useState([
-    {task: 'Nothing to see here', status: 'incomplete', date: '01/20/23', id: 1},
-    {task: 'Just testing the waters', status: 'in progress', id: 2},
-  ]);
+  function getLocalData(){
+    const todoItem = localStorage.getItem("tasks")
+    const savedTasks = JSON.parse(todoItem)
+    return savedTasks || [];
+  }
+  // {task: 'Nothing to see here', status: 'incomplete', date: '01/20/23', id: 1},
+    // {task: 'Just testing the waters', status: 'in progress', id: 2},
+  // useEffect(() => {
+  //   const data = localStorage.getItem('tasks');
+  //   if (data !== null) setNewTasks(JSON.parse(data))
+  // }, [])
+
+  useEffect(() => {
+    localStorage.setItem("tasks", JSON.stringify(tasks))
+  }, [tasks])
 
   const handleClick = (id) => {
     setNewTasks((prevTask) => {

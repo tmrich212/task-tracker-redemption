@@ -7,6 +7,7 @@ export default function NewTaskForm() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+
         const newTask = {
             task: task,
             status: status,

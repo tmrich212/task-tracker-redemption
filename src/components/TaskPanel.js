@@ -19,27 +19,15 @@ const TaskPanel = ({ tasks, handleClick, editTask }) => {
               {tasks.map((task, idx) => (
                 <tr key={task.idx}>
                   <td>{task.task}</td>
-                  <td>{task.status}</td>
+                  <td className={`${task.status}`}>{task.status}</td>
                   <td>{task.date}</td>
                   {/* <td><button className='action-btn' onClick={() => editTask(idx)}>edit</button></td> */}
-                  <td><button className='action-btn' onClick={() => handleClick(task.id)}>delete item</button></td>
+                  <td><button className='action-btn' onClick={() => handleClick(task.id)}>delete</button></td>
                 </tr>
               ))}
 
             </tbody>
           </table>
-
-{/*        
-            <div className='task-container'>
-            {tasks.map((task) => (
-                  <div key={task.id} className="task-item">
-                    <h3>{task.task}</h3>
-                    <p>status: {task.status}</p>
-                    <p>due date: {task.date}</p>
-                    
-                  </div>   
-            ))}
-            </div> */}
         </div>
      );
 }
